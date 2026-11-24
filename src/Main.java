@@ -16,16 +16,22 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         Biblioteca biblioteca = new Biblioteca();
         Loja loja = new Loja();
+        Clinica clinica = new Clinica();
+        Estacionamento estacionamento = new Estacionamento();
         int op;
         do {
             System.out.println("\n=== MENU ===");
             System.out.println("1 - Biblioteca Escolar");
             System.out.println("2 - Compra Online");
+            System.out.println("3 - Agendamento Médico");
+            System.out.println("4 - Estacionamento");
             System.out.println("0 - Sair");
             op = lerInt(sc, "Opção: ");
             switch (op) {
                 case 1 -> biblioteca.executar(sc);
                 case 2 -> loja.executar(sc);
+                case 3 -> clinica.executar(sc);
+                case 4 -> estacionamento.executar(sc);
                 case 0 -> System.out.println("Sistema encerrado.");
                 default -> System.out.println("Opção inválida.");
             }
